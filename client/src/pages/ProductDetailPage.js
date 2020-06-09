@@ -125,7 +125,7 @@ function ProductDetailPage(props) {
                                     <div className="sin__desc product__share__link">
                                         <p><span>Share this:</span></p>
                                         <div class="sharethis-inline-share-buttons"></div>
-                                        <ul className="pro__share">
+                                        {/* <ul className="pro__share">
                                             <li><NavLink to="#" target="_blank"><i className="icon-social-twitter icons"></i></NavLink></li>
 
                                             <li><NavLink to="#" target="_blank"><i className="icon-social-instagram icons"></i></NavLink></li>
@@ -138,6 +138,7 @@ function ProductDetailPage(props) {
 
                                             <li><NavLink to="#" target="_blank"><i className="icon-social-pinterest icons"></i></NavLink></li>
                                         </ul>
+                                     */}
                                     </div>
                                 </div>
                             </div>
