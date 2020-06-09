@@ -4,12 +4,21 @@ import {NavLink} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux'
 import {addItem} from '../actions/cartAction'
-
+import { useAlert, positions } from 'react-alert'
 
 import ProductCrasual from '../components/shop/Product-Crasual'
 import LogoSlider from '../components/shop/LogoSlider'
 
 function ProductDetailPage(props) {
+
+    const alert = useAlert();
+    
+    const addToCartHandler = (product) => {
+        props.addItem(product);
+        alert.show('Product Added to Cart Successfully!!!', { position: positions.MIDDLE,  type: 'success' })
+
+    }
+
 
     const [product, setProduct] = useState({p:{}});
     const productId = props.match.params.id;
@@ -110,8 +119,8 @@ function ProductDetailPage(props) {
                                     <li className="old"><i className="icon-star icons"></i></li>
                                 </ul>
                                 <ul  className="pro__prize">
-                                    <li className="old__prize">&#8377;{ product.p.price }</li>
-                                    <li className="new__prize">&#8377;{ product.p.price - product.p.discount}</li>
+                                    <li className="old__prize">${ product.p.price }</li>
+                                    <li className="new__prize">${ product.p.price - product.p.discount}</li>
                                 </ul>
                                 <p className="pro__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
                                 <div className="ht__pro__desc">
@@ -119,26 +128,14 @@ function ProductDetailPage(props) {
                                         <p><span>Availability:</span> In Stock</p>
                                     </div>                               
                                    
-                                    
+                                    <div className="sin__desc product__share__link">
+                                        <NavLink className="fr__btn" to="#" onClick={() => addToCartHandler(product)}>Add To Cart</NavLink>
+                                    </div> 
                                    
 
                                     <div className="sin__desc product__share__link">
                                         <p><span>Share this:</span></p>
                                         <div class="sharethis-inline-share-buttons"></div>
-                                        {/* <ul className="pro__share">
-                                            <li><NavLink to="#" target="_blank"><i className="icon-social-twitter icons"></i></NavLink></li>
-
-                                            <li><NavLink to="#" target="_blank"><i className="icon-social-instagram icons"></i></NavLink></li>
-
-                                            <li><NavLink to="https://www.facebook.com/Furny/?ref=bookmarks" target="_blank"><i className="icon-social-facebook icons"></i></NavLink></li>
-
-                                            <li><NavLink to="#" target="_blank"><i className="icon-social-google icons"></i></NavLink></li>
-
-                                            <li><NavLink to="#" target="_blank"><i className="icon-social-linkedin icons"></i></NavLink></li>
-
-                                            <li><NavLink to="#" target="_blank"><i className="icon-social-pinterest icons"></i></NavLink></li>
-                                        </ul>
-                                     */}
                                     </div>
                                 </div>
                             </div>

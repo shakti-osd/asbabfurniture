@@ -40,6 +40,36 @@ function Header(props) {
 	if(cartToggle.addClass) {
 		cartClass.push('shopping__cart__on');
     }
+
+
+    // Toggle Mobile Menu
+	const [menuToggle, setMenuToggle] = useState({addClass:false})
+	const toggleMobileMenu = () => {
+		setMenuToggle({addClass:!menuToggle.addClass})
+	}
+
+    var menuClass = ["meanmenu-reveal"];
+    
+    var menuClassNone = 'none';  
+    
+	if(menuToggle.addClass) {
+        menuClass.push('meanclose');
+        menuClassNone = '';        
+    }
+
+    // Toggle Mobile Menu Pages Sub Menu
+	const [menuTogglePages, setMenuTogglePages] = useState({addClass:false})
+	const toggleMobileMenuPages = () => {
+		setMenuTogglePages({addClass:!menuTogglePages.addClass})
+	}
+
+    
+    var menuClassPagesNone = 'none';      
+	if(menuTogglePages.addClass) {
+        menuClassPagesNone = '';        
+    }
+
+    ////////////////////////////////
     
     const [search, setSearch] = useState('');
     const onChangeHandler = e => {
@@ -197,25 +227,133 @@ function Header(props) {
                             </div>
                         </div>
 
-                        <div className="mobile-menu-area mean-container"><div className="mean-bar"><NavLink to="#nav" className="meanmenu-reveal"><span></span><span></span><span></span></NavLink><nav className="mean-nav">
-                                            <ul className="none">
-                                                <li><NavLink to="index.html">Home</NavLink></li>
-                                                <li><NavLink to="blog.html">blog</NavLink></li>
-                                                <li><NavLink to="#">pages</NavLink>
-                                                    <ul className="none">
-                                                        <li><NavLink to="blog.html">Blog</NavLink></li>
-                                                        <li><NavLink to="blog-details.html">Blog Details</NavLink></li>
-                                                        <li><NavLink to="cart.html">Cart page</NavLink></li>
-                                                        <li><NavLink to="checkout.html">checkout</NavLink></li>
-                                                        <li><NavLink to="contact.html">contact</NavLink></li>
-                                                        <li><NavLink to="product-grid.html">product grid</NavLink></li>
-                                                        <li><NavLink to="product-details.html">product details</NavLink></li>
-                                                        <li><NavLink to="wishlist.html">wishlist</NavLink></li>
-                                                    </ul>
-                                                <NavLink to="#" className="mean-expand" href="#">+</NavLink></li>
-                                                <li className="mean-last"><NavLink to="contact.html">contact</NavLink></li>
+                        <div className="mobile-menu-area mean-container">
+                            <div className="mean-bar"><NavLink to="#nav" onClick={toggleMobileMenu} className={menuClass.join(' ')}
+                                style={{ right: '0px', left: 'auto', textAlign: 'center', textIndent: '0px', fontSize: '18px' }}>
+                                    <span></span><span></span><span></span></NavLink>
+                                <nav className="mean-nav">
+                                    <ul className={menuClassNone}>
+                                        <li><NavLink to="/">Home</NavLink></li>
+                                        <li><NavLink to="#">Living Room</NavLink>
+                                            <ul className={menuClassPagesNone}>
+                                                    <li><NavLink to="#" className="mega__title">Sofa Set</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/shop/fabric-sofa-sets" >Fabric Sofa Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/wooden-sofa-sets" >Wooden Sofa Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/sofa-cum-beds" >Sofa Cum Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Leather Sofa Sets</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Sofa Cum Bed</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Fabric Sofa Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Wooden Sofa Beds</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Chairs</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Lounge Chairs</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Designer Chairs</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Bar Stools</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                <li><NavLink to="/cart">Cart page</NavLink></li>
+                                                <li><NavLink to="/checkout">checkout</NavLink></li>
+                                                <li><NavLink to="/contact">contact</NavLink></li>
+                                                <li><NavLink to="/wishlist">wishlist</NavLink></li>
                                             </ul>
-                                        </nav></div></div>
+                                            <NavLink to="#" className="mean-expand" href="#" onClick={toggleMobileMenuPages}>+</NavLink>
+                                        </li>
+                                        
+                                        
+                                        <li><NavLink to="#">Bedroom</NavLink>
+                                                <ul className={menuClassPagesNone}>
+                                                    <li><NavLink to="#" className="mega__title">Beds</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Beds With Storage</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Beds Without Storage</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Double Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Single Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">King Size Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Queen Size Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Kids Beds</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Mattresses</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Mattresses</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Kids Bedroom</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Kids Beds</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <NavLink to="#" className="mean-expand" href="#" onClick={toggleMobileMenuPages}>+</NavLink>
+                                        </li>
+                                        
+                                        <li className="drop"><NavLink to="#">Dining</NavLink>
+                                                <ul className={menuClassPagesNone}>
+                                                    <li><NavLink to="#" className="mega__title">Dining Tables & Sets</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">8 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">6 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">4 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Folding Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">All Table Sets</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Chairs</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Dining Chairs</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Chair Pads</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Dining Storage</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Crockery Units</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Kitchen Cabinets & Racks</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <NavLink to="#" className="mean-expand" href="#" onClick={toggleMobileMenuPages}>+</NavLink>
+                                            </li>
+                                            <li className="drop"><NavLink to="#">Study</NavLink>
+                                                <ul className={menuClassPagesNone}>
+                                                    <li><NavLink to="#" className="mega__title">Study Tables</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">8 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">6 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">4 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Folding Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">All Table Sets</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Study Chairs</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Dining Chairs</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Chair Pads</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><NavLink to="#" className="mega__title">Study Lamps</NavLink>
+                                                        <ul className="mega__item">
+                                                            <li><NavLink to="/coming-soon">Crockery Units</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Kitchen Cabinets & Racks</NavLink></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <NavLink to="#" className="mean-expand" href="#" onClick={toggleMobileMenuPages}>+</NavLink>
+                                            </li>
+
+                                        <li className="mean-last"><NavLink to="/contact">contact</NavLink></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                       </div>
 
                                           
                     </div>
