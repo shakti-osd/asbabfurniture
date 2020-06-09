@@ -63,7 +63,7 @@ const StripeButtonCheckout = ({ price, userid }) => {
       name='Absas Furniture'
       billingAddress
       shippingAddress
-      image='https://svgshare.com/i/CUz.svg'
+      image='https://absas-osd.herokuapp.com/images/logo/4.png'
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel='Pay Now'
