@@ -106,98 +106,89 @@ function Header(props) {
                                                             <li><NavLink to="/shop/fabric-sofa-sets" >Fabric Sofa Sets</NavLink></li>
                                                             <li><NavLink to="/shop/wooden-sofa-sets" >Wooden Sofa Sets</NavLink></li>
                                                             <li><NavLink to="/shop/sofa-cum-beds" >Sofa Cum Beds</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Leather Sofa Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/leather-sofa-sets">Leather Sofa Sets</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Sofa Cum Bed</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Fabric Sofa Beds</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Wooden Sofa Beds</NavLink></li>
+                                                            <li><NavLink to="/shop/fabric-sofa-beds">Fabric Sofa Beds</NavLink></li>
+                                                            <li><NavLink to="/shop/wooden-sofa-beds">Wooden Sofa Beds</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Chairs</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Lounge Chairs</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Designer Chairs</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Bar Stools</NavLink></li>
+                                                            <li><NavLink to="/shop/lounge-chairs">Lounge Chairs</NavLink></li>
+                                                            <li><NavLink to="/shop/benches">Benches</NavLink></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className="drop"><NavLink to="/coming-soon">Bedroom</NavLink>
+                                            <li className="drop"><NavLink to="#">Bedroom</NavLink>
                                                 <ul className="dropdown mega_dropdown">
                                                     <li><NavLink to="#" className="mega__title">Beds</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Beds With Storage</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Beds Without Storage</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Double Beds</NavLink></li>
+                                                            <li><NavLink to="/shop/beds-with-storage">Beds With Storage</NavLink></li>
+                                                            <li><NavLink to="/shop/beds-without-storage">Beds Without Storage</NavLink></li>
+                                                            {/* <li><NavLink to="/coming-soon">Double Beds</NavLink></li>
                                                             <li><NavLink to="/coming-soon">Single Beds</NavLink></li>
                                                             <li><NavLink to="/coming-soon">King Size Beds</NavLink></li>
                                                             <li><NavLink to="/coming-soon">Queen Size Beds</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Kids Beds</NavLink></li>
+                                                            <li><NavLink to="/coming-soon">Kids Beds</NavLink></li> */}
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Mattresses</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Mattresses</NavLink></li>
+                                                            <li><NavLink to="/shop/mattresses">Mattresses</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Kids Bedroom</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Kids Beds</NavLink></li>
+                                                            <li><NavLink to="/shop/kids-bed">Kids Beds</NavLink></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className="drop"><NavLink to="/coming-soon">Dining</NavLink>
+                                            <li className="drop"><NavLink to="#">Dining</NavLink>
                                                 <ul className="dropdown mega_dropdown">
                                                     <li><NavLink to="#" className="mega__title">Dining Tables & Sets</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">8 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">6 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">4 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Folding Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">All Table Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/8-seater-dining-table-sets">8 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/6-seater-dining-table-sets">6 Seater Dining Table Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/4-seater-dining-table-sets">4 Seater Dining Table Sets</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Chairs</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Dining Chairs</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Chair Pads</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
+                                                            <li><NavLink to="/shop/dining-chairs">Dining Chairs</NavLink></li>
+                                                            <li><NavLink to="/shop/chair-pads">Chair Pads</NavLink></li>
+                                                            <li><NavLink to="/shop/benches">Benches</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Dining Storage</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Crockery Units</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Kitchen Cabinets & Racks</NavLink></li>
+                                                            <li><NavLink to="/shop/crockery-units">Crockery Units</NavLink></li>
+                                                            <li><NavLink to="/shop/kitchen-cabinets-racks">Kitchen Cabinets & Racks</NavLink></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className="drop"><NavLink to="/coming-soon">Study</NavLink>
+                                            <li className="drop"><NavLink to="#">Study</NavLink>
                                                 <ul className="dropdown mega_dropdown">
                                                     <li><NavLink to="#" className="mega__title">Study Tables</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">8 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">6 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">4 Seater Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Folding Dining Table Sets</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">All Table Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/study-tables">Study Tables</NavLink></li>
+                                                            <li><NavLink to="/shop/computer-tables">Computer Tables</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Study Chairs</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Dining Chairs</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Chair Pads</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Benches</NavLink></li>
+                                                            <li><NavLink to="/shop/study-chairs">Study Chairs</NavLink></li>
+                                                            <li><NavLink to="/shop/office-chairs">Office Chairs</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Study Lamps</NavLink>
                                                         <ul className="mega__item">
-                                                            <li><NavLink to="/coming-soon">Crockery Units</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Kitchen Cabinets & Racks</NavLink></li>
+                                                            <li><NavLink to="/shop/study-lamps">Study Lamps</NavLink></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -241,7 +232,7 @@ function Header(props) {
                                                             <li><NavLink to="/shop/fabric-sofa-sets" >Fabric Sofa Sets</NavLink></li>
                                                             <li><NavLink to="/shop/wooden-sofa-sets" >Wooden Sofa Sets</NavLink></li>
                                                             <li><NavLink to="/shop/sofa-cum-beds" >Sofa Cum Beds</NavLink></li>
-                                                            <li><NavLink to="/coming-soon">Leather Sofa Sets</NavLink></li>
+                                                            <li><NavLink to="/shop/leather-sofa-sets">Leather Sofa Sets</NavLink></li>
                                                         </ul>
                                                     </li>
                                                     <li><NavLink to="#" className="mega__title">Sofa Cum Bed</NavLink>

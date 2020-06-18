@@ -37,7 +37,7 @@ class Shop extends Component{
        // console.log(response.data.results)
        
 		this.setState({products: response.data.results});
-		this.setState({range:1100})
+		this.setState({range:1900})
       })
       .catch(err => console.log(err))
     }
@@ -141,22 +141,21 @@ class Shop extends Component{
                                     <div className="htc__product__rightidebar">
                                         <div className="htc__grid__top">
                                             <div className="htc__select__option">
-                                                <select className="ht__select">
-                                                    <option>Default softing</option>
-                                                    <option>Sort by popularity</option>
-                                                    <option>Sort by average rating</option>
-                                                    <option>Sort by newness</option>
+                                                <select className="ht__select" onChange={this.changeSorting}>
+                                                    <option value="ascending">Default sorting</option>
+                                                    <option value="descending">Sort by latest</option>
+                                                    <option value="ascending">Sort by oldest</option>
                                                 </select>
-                                                <select className="ht__select">
+                                                {/* <select className="ht__select">
                                                     <option>Show by</option>
                                                     <option>Sort by popularity</option>
                                                     <option>Sort by average rating</option>
                                                     <option>Sort by newness</option>
-                                                </select>
+                                                </select> */}
                                             </div>
-                                            <div className="ht__pro__qun">
+                                            {/* <div className="ht__pro__qun">
                                                 <span>Showing 1-12 of 1033 products</span>
-                                            </div>
+                                            </div> */}
                                             
                                             <ul className="view__mode" role="tablist">
                                                 <li role="presentation" className="grid-view active"><a href="#grid-view" role="tab" data-toggle="tab"><i className="zmdi zmdi-grid"></i></a></li>

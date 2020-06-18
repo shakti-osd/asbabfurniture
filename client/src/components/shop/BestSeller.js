@@ -11,7 +11,8 @@ function BestSeller() {
         const productPath = process.env.NODE_ENV === 'production' ? '/products-server.js' : '/products.js';
 		axios.get(productPath)
       .then(response => {
-        const bestSellerProducts = response.data.results.filter(product => product.cat_slug === 'sofa-cum-beds');
+        const tempBestSellerProducts = response.data.results.filter(product => product.cat_slug === 'sofa-cum-beds');
+        const bestSellerProducts = tempBestSellerProducts.slice(0,3);
 		setProducts({products: bestSellerProducts});
       })
       .catch(err => console.log(err))

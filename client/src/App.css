@@ -34,6 +34,7 @@
 .product-slider .InfiniteCarouselSlide{width: 80%;}
 .product-slider .InfiniteCarouselSlide img{width:80%}
 
+.ht__list__thumb img{width: auto; max-width: 578px;}
 
 .header__search span i {
   color: #000000;
